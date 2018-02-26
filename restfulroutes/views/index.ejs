@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<% blogs.forEach (function (blog){ %>
+
+<div>
+
+<h2><%= blog.title %></h2>
+
+<img src="<%= blog.image %>">
+
+<h3> <%= blog.body.substring(0, 100) %></h3>
+
+<a class="mini ui blue button" href="/blogs/<%= blog._id %>">Read more</a>
+
+<p>Post created: <strong><%= blog.created %></strong></p>
+
+</div>
+    
+<% }); %>
+
+<% include partials/footer %>
+
+

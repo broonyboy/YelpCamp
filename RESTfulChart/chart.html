@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restful Chart</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css" />
+        <link rel="stylesheet" href="chart.css">
+    </head>
+    <body>
+        <div class="ui message container">
+            <h1 class="ui huge center aligned header">RESTful Routes</h1><br/>
+            <h2 class="ui header center aligned">A table of the 7 RESTful Routes</h2>
+        </div>
+        <div>
+            <table class="ui celled table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Path</th>
+                        <th>HTTP Verb</th>
+                        <th>Purpose</th>
+                        <th>Mongoose Method</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Index</td>
+                        <td>/dogs</td>
+                        <td>GET</td>
+                        <td>List all dogs</td>
+                        <td>Dog.find()</td>
+                    </tr>
+                    <tr class = "green">
+                        <td>New</td>
+                        <td>/dogs/new</td>
+                        <td>GET</td>
+                        <td>Show new dog form</td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr class = "green">
+                        <td>Create</td>
+                        <td>/dogs</td>
+                        <td>POST</td>
+                        <td>Create a new dog and then redirect somewhere</td>
+                        <td>Dog.create()</td>
+                    </tr>
+                    <tr class = "blue">
+                        <td>Show</td>
+                        <td>/dogs/:id</td>
+                        <td>GET</td>
+                        <td>Show info about one specific dog.</td>
+                        <td>Dog.findById()</td>
+                    </tr>
+                    <tr class = "yellow">
+                        <td>Edit</td>
+                        <td>/dogs/:id/edit</td>
+                        <td>GET</td>
+                        <td>Show edit form for one dog</td>
+                        <td>Dog.findById()</td>
+                    </tr>
+                     <tr class = "yellow">
+                        <td>update</td>
+                        <td>/dogs/:id</td>
+                        <td>PUT</td>
+                        <td>Update particular dog then redirect somewhere</td>
+                        <td>Dog.findByIdAndUpdate()</td>
+                    </tr>
+                    <tr class = "red">
+                        <td>Delete</td>
+                        <td>/dogs/:id</td>
+                        <td>DELETE</td>
+                        <td>Delete a particular dog and redirect somewhere</td>
+                        <td>Dog.findByIdAndRemove()</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+                    
+
+    </body>
+</html>
